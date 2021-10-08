@@ -24,8 +24,4 @@ Desenvolver uma API REST com a última versão do laravel.
   * Descrição não ultrapassar 191 caracteres;
 * A API deverá conter uma busca com filtro por usuário na listagem de todas as despesas.
 * Ao cadastrar uma despesa, um email deverá ser enviado ao usuário.
-<<<<<<< HEAD
 * O email deverá ter o título "Despesa cadastrada" e ser enviado de forma assíncrona.
-=======
-* O email deverá ter o título "Despesa cadastrada" e ser enviado de forma assíncrona.
->>>>>>> 3ed0538 (Importacao)
