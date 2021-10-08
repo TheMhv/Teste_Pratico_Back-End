@@ -29,9 +29,10 @@ Desenvolver uma API REST com a última versão do laravel.
 
 ## Instalação
 
-1. Faça sua configuração do arquivo `.env`.
-2. Crie as tabelas e usuários: `php artisan migrate --seed`
-3. Execute o servidor: `php artisan serve`
+1. Instale as dependências necessárias `composer install`
+2. Faça sua configuração do arquivo `.env`.
+3. Crie as tabelas e usuários: `php artisan migrate --seed`
+4. Execute o servidor: `php artisan serve`
 
 ## Como usar
 
