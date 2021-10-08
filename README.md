@@ -31,7 +31,7 @@ Desenvolver uma API REST com a última versão do laravel.
 
 1. Instale as dependências necessárias `composer install`
 2. Gere uma nova api key `php artisan key:generate`
-3. Faça sua configuração do arquivo `.env`.
+3. Faça sua configuração no arquivo `.env`.
 4. Crie as tabelas e usuários: `php artisan migrate --seed`
 5. Execute o servidor: `php artisan serve`
 
