@@ -37,14 +37,9 @@ Desenvolver uma API REST com a última versão do laravel.
 
 Utilize o http header de autorização padrão para os testes: `Authorization: Bearer YWRtaW46YWRtaW4=`
 
--Para listar todas as despesas: `GET` `http://127.0.0.1:8000/api/despesas/`
-
--Listar as despesas de um usuário: `GET` `http://127.0.0.1:8000/api/despesas/{USUÁRIO}`
-
--Filtrar uma despesa por id: `GET` `http://127.0.0.1:8000/api/despesa/{ID}`
-
--Criar uma nova despesa: `POST` `http://127.0.0.1:8000/api/despesa/` `descricao={DESCRIÇÃO}&usuario={USUÁRIO}&data={DATA}&valor={VALOR}`
-
--Atualizar uma despesa: `PUT` `http://127.0.0.1:8000/api/despesa/{ID}` `descricao={DESCRIÇÃO}&usuario={USUÁRIO}&data={DATA}&valor={VALOR}`
-
--Remover uma despesa: `DELETE` `http://127.0.0.1:8000/api/despesa/{ID}`
+* Para listar todas as despesas: `GET` `http://127.0.0.1:8000/api/despesas/`
+* Listar as despesas de um usuário: `GET` `http://127.0.0.1:8000/api/despesas/{USUÁRIO}`
+* Filtrar uma despesa por id: `GET` `http://127.0.0.1:8000/api/despesa/{ID}`
+* Criar uma nova despesa: `POST` `http://127.0.0.1:8000/api/despesa/` `descricao={DESCRIÇÃO}&usuario={USUÁRIO}&data={DATA}&valor={VALOR}`
+* Atualizar uma despesa: `PUT` `http://127.0.0.1:8000/api/despesa/{ID}` `descricao={DESCRIÇÃO}&usuario={USUÁRIO}&data={DATA}&valor={VALOR}`
+* Remover uma despesa: `DELETE` `http://127.0.0.1:8000/api/despesa/{ID}`
