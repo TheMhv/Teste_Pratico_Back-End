@@ -25,3 +25,26 @@ Desenvolver uma API REST com a última versão do laravel.
 * A API deverá conter uma busca com filtro por usuário na listagem de todas as despesas.
 * Ao cadastrar uma despesa, um email deverá ser enviado ao usuário.
 * O email deverá ter o título "Despesa cadastrada" e ser enviado de forma assíncrona.
+
+
+## Instalação
+
+1. Faça a configuração do arquivo `.env`.
+2. Crie as tabelas e usuários: `php artisan migrate --seed`
+3. Execute o servidor: `php artisan serve`
+
+## Como usar
+
+Utilize o http header de autorização padrão para os testes: `Authorization: Bearer YWRtaW46YWRtaW4=`
+
+-Para listar todas as despesas: `GET` `http://127.0.0.1:8000/api/despesas/`
+
+-Listar as despesas de um usuário: `GET` `http://127.0.0.1:8000/api/despesas/{USUÁRIO}`
+
+-Filtrar uma despesa por id: `GET` `http://127.0.0.1:8000/api/despesa/{ID}`
+
+-Criar uma nova despesa: `POST` `http://127.0.0.1:8000/api/despesa/` `descricao={DESCRIÇÃO}&usuario={USUÁRIO}&data={DATA}&valor={VALOR}`
+
+-Atualizar uma despesa: `PUT` `http://127.0.0.1:8000/api/despesa/{ID}` `descricao={DESCRIÇÃO}&usuario={USUÁRIO}&data={DATA}&valor={VALOR}`
+
+-Remover uma despesa: `DELETE` `http://127.0.0.1:8000/api/despesa/{ID}`
