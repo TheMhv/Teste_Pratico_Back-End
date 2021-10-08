@@ -113,11 +113,13 @@ class DespesasController extends Controller
         public function atualizar(Request $request, $id)
         {
             // Recebe e Valida os requests
-            $usuario = Usuarios::where('usuario', $request->usuario)->first();
-            if (!$usuario) return $this->retorno(400, null, 'Usuário não encontrado.');
-            if (strtotime($request->data) > time()) return $this->retorno(400, null, 'A data da despesa não pode ser futura.');
-            if (floatval($request->valor) < 0) return $this->retorno(400, null, 'O valor da despesa não pode ser negativo.');
-            if (strlen($request->descricao) > 191) return $this->retorno(400, null, 'A descrição ultrapassou o limite de 191 caracteres.');
+            if (!empty($request->usuario)) {
+                $usuario = Usuarios::where('usuario', $request->usuario)->first();
+                if (!$usuario) return $this->retorno(400, null, 'Usuário não encontrado.');
+            }
+            if (!empty($request->data) && strtotime($request->data) > time()) return $this->retorno(400, null, 'A data da despesa não pode ser futura.');
+            if (!empty($request->valor) && floatval($request->valor) < 0) return $this->retorno(400, null, 'O valor da despesa não pode ser negativo.');
+            if (!empty($request->descricao) && strlen($request->descricao) > 191) return $this->retorno(400, null, 'A descrição ultrapassou o limite de 191 caracteres.');
 
             // Procura a despesa
             $despesa = Despesas::where('id', $id)->first();
@@ -127,10 +129,10 @@ class DespesasController extends Controller
 
             // Atualiza os dados da despesa
             $despesa = new Despesas;
-            $despesa->usuario = $request->usuario;
-            $despesa->descricao = $request->descricao;
-            $despesa->data = $request->data;
-            $despesa->valor = $request->valor;
+            if (!empty($request->usuario)) $despesa->usuario = $request->usuario;
+            if (!empty($request->descricao)) $despesa->descricao = $request->descricao;
+            if (!empty($request->data)) $despesa->data = $request->data;
+            if (!empty($request->valor)) $despesa->valor = $request->valor;
 
             // Retorna a despesa atualizada
             if ($despesa->save()) return $this->retorno(200, $despesa, 'Despesa atualizada com sucesso.');
